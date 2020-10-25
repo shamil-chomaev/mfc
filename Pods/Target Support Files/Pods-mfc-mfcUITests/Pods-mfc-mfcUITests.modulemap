@@ -1,0 +1,6 @@
+framework module Pods_mfc_mfcUITests {
+  umbrella header "Pods-mfc-mfcUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

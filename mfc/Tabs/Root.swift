@@ -19,15 +19,7 @@ struct Root: View {
     
     var body: some View {
         TabView(selection: $selectedView) {
-            NavigationView{
-                ScrollView(.vertical, showsIndicators: true){
-                    
-                    VStack {
-                        Text("Тут будет текст")
-                    }
-                }
-                .navigationTitle("Новости")
-            }
+            News()
             .tabItem {
                 Image(systemName: "list.bullet.below.rectangle")
                 Text("Новости")
@@ -79,17 +71,9 @@ struct Root: View {
                     .fontWeight(.bold)
                 
             }.tag(4)
-            NavigationView{
-                ScrollView(.vertical, showsIndicators: true){
-                    
-                    VStack {
-                        Text("Тут будет текст")
-                    }
-                }            .navigationTitle("Профиль")
-            }
+            Profile()
             .tabItem {
                 Image(systemName: "person")
-                //                            .animation(.spring())
                 Text("Профиль")
                     .fontWeight(.bold)
                 
