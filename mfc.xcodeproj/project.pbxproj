@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0641AC17254B0BD8002126D3 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0641AC16254B0BD8002126D3 /* Services.swift */; };
 		0679EB6B25443D5B00625804 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0679EB6A25443D5B00625804 /* Profile.swift */; };
 		067BC3E425448C4C009AD307 /* AuthProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067BC3E325448C4C009AD307 /* AuthProfileView.swift */; };
 		067BC3E925448F8D009AD307 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067BC3E825448F8D009AD307 /* AuthView.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0641AC16254B0BD8002126D3 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		0679EB6A25443D5B00625804 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		067BC3E325448C4C009AD307 /* AuthProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProfileView.swift; sourceTree = "<group>"; };
 		067BC3E825448F8D009AD307 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0641AC1B254B0BDC002126D3 /* Services Views */ = {
+			isa = PBXGroup;
+			children = (
+				0641AC16254B0BD8002126D3 /* Services.swift */,
+			);
+			path = "Services Views";
+			sourceTree = "<group>";
+		};
 		0679EB6925443CA100625804 /* Profile Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +208,7 @@
 				06BA70FD251BB60A0095D512 /* Root.swift */,
 				06F17FFF2544CE87008A653B /* Home Views */,
 				0679EB6925443CA100625804 /* Profile Views */,
+				0641AC1B254B0BDC002126D3 /* Services Views */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -502,6 +513,7 @@
 				067BC3E925448F8D009AD307 /* AuthView.swift in Sources */,
 				067BC3E425448C4C009AD307 /* AuthProfileView.swift in Sources */,
 				06F180042544CF9E008A653B /* AddNews.swift in Sources */,
+				0641AC17254B0BD8002126D3 /* Services.swift in Sources */,
 				06BA70CA251BB5E10095D512 /* AppDelegate.swift in Sources */,
 				0679EB6B25443D5B00625804 /* Profile.swift in Sources */,
 				06F17FFB2544CE83008A653B /* News.swift in Sources */,

@@ -41,14 +41,7 @@ struct Root: View {
                     .fontWeight(.bold)
                 
             }.tag(2)
-            NavigationView{
-                ScrollView(.vertical, showsIndicators: true){
-                    
-                    VStack {
-                        Text("Тут будет текст")
-                    }
-                }           .navigationTitle("Услуги")
-            }
+            Services()
             .tabItem {
                 Image(systemName: "briefcase")
                 //                            .animation(.spring())
