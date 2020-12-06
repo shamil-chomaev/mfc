@@ -26,14 +26,7 @@ struct Root: View {
                     .fontWeight(.bold)
                 
             }.tag(1)
-            NavigationView{
-                ScrollView(.vertical, showsIndicators: true){
-                    
-                    VStack {
-                        Text("Тут будет текст")
-                    }
-                }              .navigationTitle("На карте")
-            }
+            Maps()
             .tabItem {
                 Image(systemName: "mappin.and.ellipse")
                 //                            .animation(.spring())
@@ -41,14 +34,7 @@ struct Root: View {
                     .fontWeight(.bold)
                 
             }.tag(2)
-            NavigationView{
-                ScrollView(.vertical, showsIndicators: true){
-                    
-                    VStack {
-                        Text("Тут будет текст")
-                    }
-                }           .navigationTitle("Услуги")
-            }
+            Services()
             .tabItem {
                 Image(systemName: "briefcase")
                 //                            .animation(.spring())

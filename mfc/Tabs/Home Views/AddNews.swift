@@ -151,3 +151,11 @@ enum FIRST {
     case critic
     case good
 }
+
+
+struct ServicesPush {
+    var title: String
+    var description: String
+    var type: String
+    var order: Int
+}

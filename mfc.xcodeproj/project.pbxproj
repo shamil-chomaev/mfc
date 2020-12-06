@@ -20,6 +20,10 @@
 		06BA70E1251BB5E50095D512 /* mfcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BA70E0251BB5E50095D512 /* mfcTests.swift */; };
 		06BA70EC251BB5E50095D512 /* mfcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BA70EB251BB5E50095D512 /* mfcUITests.swift */; };
 		06BA70FE251BB60A0095D512 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BA70FD251BB60A0095D512 /* Root.swift */; };
+		06C97A6D257985FE00F28D51 /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C97A6C257985FE00F28D51 /* Maps.swift */; };
+		06E3CAA1257D5DF500A6B567 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E3CAA0257D5DF500A6B567 /* Services.swift */; };
+		06E3CAAF257D714800A6B567 /* AddServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E3CAAE257D714800A6B567 /* AddServices.swift */; };
+		06E3CAB4257D775200A6B567 /* ServicesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E3CAB3257D775200A6B567 /* ServicesStruct.swift */; };
 		06F17FF62544CC7C008A653B /* UserProfileControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F17FF52544CC7C008A653B /* UserProfileControl.swift */; };
 		06F17FFB2544CE83008A653B /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F17FFA2544CE83008A653B /* News.swift */; };
 		06F180042544CF9E008A653B /* AddNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F180032544CF9E008A653B /* AddNews.swift */; };
@@ -68,6 +72,10 @@
 		06BA70EB251BB5E50095D512 /* mfcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mfcUITests.swift; sourceTree = "<group>"; };
 		06BA70ED251BB5E50095D512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06BA70FD251BB60A0095D512 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
+		06C97A6C257985FE00F28D51 /* Maps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
+		06E3CAA0257D5DF500A6B567 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		06E3CAAE257D714800A6B567 /* AddServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServices.swift; sourceTree = "<group>"; };
+		06E3CAB3257D775200A6B567 /* ServicesStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesStruct.swift; sourceTree = "<group>"; };
 		06F17FF52544CC7C008A653B /* UserProfileControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileControl.swift; sourceTree = "<group>"; };
 		06F17FFA2544CE83008A653B /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		06F180032544CF9E008A653B /* AddNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNews.swift; sourceTree = "<group>"; };
@@ -197,9 +205,28 @@
 			children = (
 				06BA70FD251BB60A0095D512 /* Root.swift */,
 				06F17FFF2544CE87008A653B /* Home Views */,
+				06C97A6B257985B600F28D51 /* Maps Views */,
+				06E3CA9F257D5D8E00A6B567 /* Services Views */,
 				0679EB6925443CA100625804 /* Profile Views */,
 			);
 			path = Tabs;
+			sourceTree = "<group>";
+		};
+		06C97A6B257985B600F28D51 /* Maps Views */ = {
+			isa = PBXGroup;
+			children = (
+				06C97A6C257985FE00F28D51 /* Maps.swift */,
+			);
+			path = "Maps Views";
+			sourceTree = "<group>";
+		};
+		06E3CA9F257D5D8E00A6B567 /* Services Views */ = {
+			isa = PBXGroup;
+			children = (
+				06E3CAA0257D5DF500A6B567 /* Services.swift */,
+				06E3CAAE257D714800A6B567 /* AddServices.swift */,
+			);
+			path = "Services Views";
 			sourceTree = "<group>";
 		};
 		06F17FFF2544CE87008A653B /* Home Views */ = {
@@ -216,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				06F1804525457590008A653B /* NewsStruct.swift */,
+				06E3CAB3257D775200A6B567 /* ServicesStruct.swift */,
 			);
 			path = FIRModels;
 			sourceTree = "<group>";
@@ -501,13 +529,17 @@
 			files = (
 				067BC3E925448F8D009AD307 /* AuthView.swift in Sources */,
 				067BC3E425448C4C009AD307 /* AuthProfileView.swift in Sources */,
+				06C97A6D257985FE00F28D51 /* Maps.swift in Sources */,
 				06F180042544CF9E008A653B /* AddNews.swift in Sources */,
 				06BA70CA251BB5E10095D512 /* AppDelegate.swift in Sources */,
 				0679EB6B25443D5B00625804 /* Profile.swift in Sources */,
 				06F17FFB2544CE83008A653B /* News.swift in Sources */,
+				06E3CAB4257D775200A6B567 /* ServicesStruct.swift in Sources */,
 				06F1805F25457A1B008A653B /* RemoteImage.swift in Sources */,
 				06F17FF62544CC7C008A653B /* UserProfileControl.swift in Sources */,
+				06E3CAAF257D714800A6B567 /* AddServices.swift in Sources */,
 				06BA70FE251BB60A0095D512 /* Root.swift in Sources */,
+				06E3CAA1257D5DF500A6B567 /* Services.swift in Sources */,
 				06BA70CC251BB5E10095D512 /* SceneDelegate.swift in Sources */,
 				06BA70CE251BB5E10095D512 /* ContentView.swift in Sources */,
 				06F1804625457590008A653B /* NewsStruct.swift in Sources */,
@@ -685,6 +717,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"mfc/Preview Content\"";
 				DEVELOPMENT_TEAM = 35CPX3D2BA;
 				ENABLE_PREVIEWS = YES;
@@ -708,6 +741,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"mfc/Preview Content\"";
 				DEVELOPMENT_TEAM = 35CPX3D2BA;
 				ENABLE_PREVIEWS = YES;
