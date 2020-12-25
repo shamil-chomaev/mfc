@@ -11,7 +11,7 @@ import Firebase
 struct Services: View {
     
     @State var isAuth: Bool = false
-    @State var arrayServices: [ServicesStruct] = [ServicesStruct(id: "UID", title: "NT", type: "ALL", description: "DT", order: 0)]
+    @State var arrayServices: [ServicesStruct] = [ServicesStruct(id: "UID", title: "NT", type: "ALL", description: "DT", order: 0, provider: "")]
     //        ServicesStructtt(title: "Выдача паспорта",
     //                                                          type: .fed,
     //                                                          description: "Выдача или замена паспорта",
@@ -101,14 +101,20 @@ struct Services: View {
                                     self.selectType = .all
                                 }){
                                     HStack(alignment: .center, spacing: 10.0){
+                                        
+                                        Image(systemName: self.selectType == .all ? "list.dash" : "list.dash")
+                                            .font(.body)
+                                            .foregroundColor(Color("Primary"))
+                                        
                                         Text("Все услуги")
                                             .font(.body)
                                             .fontWeight(.regular)
                                         
                                         Spacer()
-                                        Image(systemName: self.selectType == .all ? "list.dash" : "list.dash")
+                                        
+                                        Text("\(arrayServices.count)")
                                             .font(.body)
-                                            .foregroundColor(Color("Primary"))
+                                            .fontWeight(.regular)
                                         //self.selectType == .all ? Color("BackgroundColorRow") : Color("Primary"))
                                     }
                                 }
@@ -132,14 +138,20 @@ struct Services: View {
                                     self.selectType = .fed
                                 }){
                                     HStack(alignment: .center, spacing: 10.0){
+                                        
+                                        Image(systemName: self.selectType == .fed ? "briefcase" : "briefcase")
+                                            .font(.body)
+                                            .foregroundColor(self.selectType == .fed ? Color("BackgroundColorRow") : Color("Primary"))
+                                        
                                         Text("Федеральные услуги")
                                             .font(.body)
                                             .fontWeight(.regular)
                                         
                                         Spacer()
-                                        Image(systemName: self.selectType == .fed ? "checkmark" : "chevron.right")
+                                        
+                                        Text("\(self.getArray(tp: ServicesEnum.fed).count)")
                                             .font(.body)
-                                            .foregroundColor(self.selectType == .fed ? Color("BackgroundColorRow") : Color("Primary"))
+                                            .fontWeight(.regular)
                                     }
                                 }
                                 .buttonStyle(PlainButtonStyle())
@@ -156,14 +168,19 @@ struct Services: View {
                                     self.selectType = .reg
                                 }){
                                     HStack(alignment: .center, spacing: 10.0){
+                                        Image(systemName: self.selectType == .reg ? "briefcase" : "briefcase")
+                                            .font(.body)
+                                            .foregroundColor(self.selectType == .reg ? Color("BackgroundColorRow") : Color("Primary"))
                                         Text("Региональные услуги")
                                             .font(.body)
                                             .fontWeight(.regular)
                                         
                                         Spacer()
-                                        Image(systemName: self.selectType == .reg ? "checkmark" : "chevron.right")
+                                        
+                                        Text("\(self.getArray(tp: ServicesEnum.reg).count)")
                                             .font(.body)
-                                            .foregroundColor(self.selectType == .reg ? Color("BackgroundColorRow") : Color("Primary"))
+                                            .fontWeight(.regular)
+                                        
                                     }
                                 }
                                 .buttonStyle(PlainButtonStyle())
@@ -181,14 +198,21 @@ struct Services: View {
                                     self.selectType = .mun
                                 }){
                                     HStack(alignment: .center, spacing: 10.0){
+                                        
+                                        Image(systemName: self.selectType == .mun ? "briefcase" : "briefcase")
+                                            .font(.body)
+                                            .foregroundColor(self.selectType == .mun ? Color("BackgroundColorRow") : Color("Primary"))
+                                        
                                         Text("Муниципальные услуги")
                                             .font(.body)
                                             .fontWeight(.regular)
                                         
                                         Spacer()
-                                        Image(systemName: self.selectType == .mun ? "checkmark" : "chevron.right")
+                                        
+                                        Text("\(self.getArray(tp: ServicesEnum.mun).count)")
                                             .font(.body)
-                                            .foregroundColor(self.selectType == .mun ? Color("BackgroundColorRow") : Color("Primary"))
+                                            .fontWeight(.regular)
+                                        
                                     }
                                 }
                                 .buttonStyle(PlainButtonStyle())
@@ -216,7 +240,13 @@ struct Services: View {
                             VStack(alignment: .center, spacing: 5) {
                                 
                                 ForEach(self.getArray(tp: selectType).filter({"\($0.title.lowercased())".contains(searchText.lowercased()) || searchText.isEmpty})) { item in
-                                    ServicesItem(item: item, selectType: selectType)
+                                    
+                                    NavigationLink(destination: DetailServices(item: item)) {
+                                        
+                                        ServicesItem(item: item, selectType: selectType)
+                                                    }
+                                    .buttonStyle(PlainButtonStyle())
+                                    .navigationBarTitle("Услуги")
                                 }
                             }
                         } else {
@@ -318,9 +348,7 @@ struct ServicesItem: View {
             
             Color("BackgroundColorRow")
             
-            Button(action: {
-                
-            }){
+           
                 VStack(alignment: .leading, spacing: 10) {
                     if item.description != "" {
                         HStack(alignment: .center, spacing: 10.0){
@@ -359,6 +387,17 @@ struct ServicesItem: View {
                             .fixedSize(horizontal: false, vertical: true)
                     }
                     
+                    HStack(alignment: .center, spacing: 5){
+                        Image(systemName: "mail.stack.fill")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+//                            .foregroundColor(Color("Primary"))
+                        Text(item.provider)
+                            .font(.caption)
+                            .fontWeight(.regular)
+                            .foregroundColor(.gray)
+                    }
+                    
                     if selectType == .all {
                         HStack(alignment: .center, spacing: 5){
                             Image(systemName: "info.circle.fill")
@@ -371,8 +410,8 @@ struct ServicesItem: View {
                         }
                     }
                 }
-            }
-            .buttonStyle(PlainButtonStyle())
+            
+            
             .padding(15)
             
         }

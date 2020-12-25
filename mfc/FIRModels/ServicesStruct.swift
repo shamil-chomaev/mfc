@@ -17,11 +17,27 @@ struct ServicesStruct: Identifiable, Codable {
     var type: String
     var description: String
     var order: Int
+    var provider: String
     
     enum CodingKeys: String, CodingKey {
         case id
         case title
         case type
+        case description
+        case order
+        case provider
+    }
+}
+
+struct SubServicesStruct: Identifiable, Codable {
+    @DocumentID var id: String?
+    var title: String
+    var description: String
+    var order: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case title
         case description
         case order
     }

@@ -12,6 +12,8 @@ struct AddServices: View {
     
     @State var title: String = ""
     @State var description: String = ""
+    @State var provider: String = ""
+    
     
     @State var select: ServicesEnum = .fed
     @State var firStatus: [StatusLoad] = []
@@ -36,6 +38,10 @@ struct AddServices: View {
                 TextField("Описание", text: $description)
             }
             
+            Section(header: Text("Provider")) {
+                TextField("Провайдер", text: $provider)
+            }
+            
             Section(header: Text("Категория")) {
                 Picker("Категория", selection: $select) {
                     Text("Федеральные услуги").tag(ServicesEnum.fed)
@@ -53,7 +59,7 @@ struct AddServices: View {
 //
 //
             Button(action: {
-                self.pushNews(serv: ServicesPush(title: title, description: description, type: select.rawValue, order: 0))
+                self.pushNews(serv: ServicesPush(title: title, description: description, type: select.rawValue, order: 0, provider: provider))
             }, label: {
                 Text("Отправить услугу")
             })
@@ -62,6 +68,7 @@ struct AddServices: View {
                 self.title = ""
                 self.description = ""
                 self.firStatus = []
+                self.provider = ""
             }, label: {
                 Text("Очистить")
             })
@@ -86,7 +93,8 @@ struct AddServices: View {
                                                                             "description": serv.description,
                                                                             "order": serv.order,
                                                                             "type": serv.type,
-                                                                            "visible": true]) { err in
+                                                                            "visible": true,
+                                                                            "provider": serv.provider]) { err in
                     if let err = err {
                         print("Error writing document: \(err)")
                         self.firStatus.append(StatusLoad(time: Date(), title: "Error writing document: \(err)", type: .critic))

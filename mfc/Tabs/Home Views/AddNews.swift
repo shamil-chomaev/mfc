@@ -158,4 +158,5 @@ struct ServicesPush {
     var description: String
     var type: String
     var order: Int
+    var provider: String
 }

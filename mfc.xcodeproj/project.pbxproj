@@ -10,6 +10,13 @@
 		0679EB6B25443D5B00625804 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0679EB6A25443D5B00625804 /* Profile.swift */; };
 		067BC3E425448C4C009AD307 /* AuthProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067BC3E325448C4C009AD307 /* AuthProfileView.swift */; };
 		067BC3E925448F8D009AD307 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067BC3E825448F8D009AD307 /* AuthView.swift */; };
+		069BFCAD25852E5F00B8C691 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069BFCAC25852E5F00B8C691 /* WidgetKit.framework */; };
+		069BFCAF25852E5F00B8C691 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069BFCAE25852E5F00B8C691 /* SwiftUI.framework */; };
+		069BFCB225852E5F00B8C691 /* mfc_alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069BFCB125852E5F00B8C691 /* mfc_alert.swift */; };
+		069BFCB525852E6000B8C691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 069BFCB425852E6000B8C691 /* Assets.xcassets */; };
+		069BFCB725852E6000B8C691 /* mfc_alert.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 069BFCB325852E5F00B8C691 /* mfc_alert.intentdefinition */; };
+		069BFCB825852E6000B8C691 /* mfc_alert.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 069BFCB325852E5F00B8C691 /* mfc_alert.intentdefinition */; };
+		069BFCBB25852E6000B8C691 /* mfc-alertExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 069BFCAB25852E5F00B8C691 /* mfc-alertExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		06AB2D2D2544BB8E0045B2FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06AB2D2C2544BB8E0045B2FF /* GoogleService-Info.plist */; };
 		06BA70CA251BB5E10095D512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BA70C9251BB5E10095D512 /* AppDelegate.swift */; };
 		06BA70CC251BB5E10095D512 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BA70CB251BB5E10095D512 /* SceneDelegate.swift */; };
@@ -24,6 +31,7 @@
 		06E3CAA1257D5DF500A6B567 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E3CAA0257D5DF500A6B567 /* Services.swift */; };
 		06E3CAAF257D714800A6B567 /* AddServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E3CAAE257D714800A6B567 /* AddServices.swift */; };
 		06E3CAB4257D775200A6B567 /* ServicesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E3CAB3257D775200A6B567 /* ServicesStruct.swift */; };
+		06E91F5C2585044E0066EDE1 /* DetailServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E91F5B2585044E0066EDE1 /* DetailServices.swift */; };
 		06F17FF62544CC7C008A653B /* UserProfileControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F17FF52544CC7C008A653B /* UserProfileControl.swift */; };
 		06F17FFB2544CE83008A653B /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F17FFA2544CE83008A653B /* News.swift */; };
 		06F180042544CF9E008A653B /* AddNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F180032544CF9E008A653B /* AddNews.swift */; };
@@ -36,6 +44,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		069BFCB925852E6000B8C691 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06BA70BE251BB5E10095D512 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 069BFCAA25852E5F00B8C691;
+			remoteInfo = "mfc-alertExtension";
+		};
 		06BA70DD251BB5E50095D512 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 06BA70BE251BB5E10095D512 /* Project object */;
@@ -52,10 +67,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		069BFCBC25852E6000B8C691 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				069BFCBB25852E6000B8C691 /* mfc-alertExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0679EB6A25443D5B00625804 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		067BC3E325448C4C009AD307 /* AuthProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProfileView.swift; sourceTree = "<group>"; };
 		067BC3E825448F8D009AD307 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		069BFCAB25852E5F00B8C691 /* mfc-alertExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "mfc-alertExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		069BFCAC25852E5F00B8C691 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		069BFCAE25852E5F00B8C691 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		069BFCB125852E5F00B8C691 /* mfc_alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mfc_alert.swift; sourceTree = "<group>"; };
+		069BFCB325852E5F00B8C691 /* mfc_alert.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = mfc_alert.intentdefinition; sourceTree = "<group>"; };
+		069BFCB425852E6000B8C691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		069BFCB625852E6000B8C691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06AB2D2C2544BB8E0045B2FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		06BA70C6251BB5E10095D512 /* mfc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mfc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BA70C9251BB5E10095D512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +112,7 @@
 		06E3CAA0257D5DF500A6B567 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		06E3CAAE257D714800A6B567 /* AddServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServices.swift; sourceTree = "<group>"; };
 		06E3CAB3257D775200A6B567 /* ServicesStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesStruct.swift; sourceTree = "<group>"; };
+		06E91F5B2585044E0066EDE1 /* DetailServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailServices.swift; sourceTree = "<group>"; };
 		06F17FF52544CC7C008A653B /* UserProfileControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileControl.swift; sourceTree = "<group>"; };
 		06F17FFA2544CE83008A653B /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		06F180032544CF9E008A653B /* AddNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNews.swift; sourceTree = "<group>"; };
@@ -96,6 +133,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		069BFCA825852E5F00B8C691 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				069BFCAF25852E5F00B8C691 /* SwiftUI.framework in Frameworks */,
+				069BFCAD25852E5F00B8C691 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		06BA70C3251BB5E10095D512 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -134,12 +180,24 @@
 			path = "Profile Views";
 			sourceTree = "<group>";
 		};
+		069BFCB025852E5F00B8C691 /* mfc-alert */ = {
+			isa = PBXGroup;
+			children = (
+				069BFCB125852E5F00B8C691 /* mfc_alert.swift */,
+				069BFCB325852E5F00B8C691 /* mfc_alert.intentdefinition */,
+				069BFCB425852E6000B8C691 /* Assets.xcassets */,
+				069BFCB625852E6000B8C691 /* Info.plist */,
+			);
+			path = "mfc-alert";
+			sourceTree = "<group>";
+		};
 		06BA70BD251BB5E10095D512 = {
 			isa = PBXGroup;
 			children = (
 				06BA70C8251BB5E10095D512 /* mfc */,
 				06BA70DF251BB5E50095D512 /* mfcTests */,
 				06BA70EA251BB5E50095D512 /* mfcUITests */,
+				069BFCB025852E5F00B8C691 /* mfc-alert */,
 				06BA70C7251BB5E10095D512 /* Products */,
 				C1D6E55120FE103663E3B1A9 /* Pods */,
 				CD20C169EA8F1E3E1B773CB8 /* Frameworks */,
@@ -152,6 +210,7 @@
 				06BA70C6251BB5E10095D512 /* mfc.app */,
 				06BA70DC251BB5E50095D512 /* mfcTests.xctest */,
 				06BA70E7251BB5E50095D512 /* mfcUITests.xctest */,
+				069BFCAB25852E5F00B8C691 /* mfc-alertExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,6 +284,7 @@
 			children = (
 				06E3CAA0257D5DF500A6B567 /* Services.swift */,
 				06E3CAAE257D714800A6B567 /* AddServices.swift */,
+				06E91F5B2585044E0066EDE1 /* DetailServices.swift */,
 			);
 			path = "Services Views";
 			sourceTree = "<group>";
@@ -283,6 +343,8 @@
 				A5E87515912F3B51D7568D77 /* Pods_mfc.framework */,
 				8E0D0048005B61C8042AF579 /* Pods_mfc_mfcUITests.framework */,
 				1DF8BCBE9047988C02135349 /* Pods_mfcTests.framework */,
+				069BFCAC25852E5F00B8C691 /* WidgetKit.framework */,
+				069BFCAE25852E5F00B8C691 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -290,6 +352,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		069BFCAA25852E5F00B8C691 /* mfc-alertExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 069BFCBF25852E6000B8C691 /* Build configuration list for PBXNativeTarget "mfc-alertExtension" */;
+			buildPhases = (
+				069BFCA725852E5F00B8C691 /* Sources */,
+				069BFCA825852E5F00B8C691 /* Frameworks */,
+				069BFCA925852E5F00B8C691 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mfc-alertExtension";
+			productName = "mfc-alertExtension";
+			productReference = 069BFCAB25852E5F00B8C691 /* mfc-alertExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		06BA70C5251BB5E10095D512 /* mfc */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06BA70F0251BB5E50095D512 /* Build configuration list for PBXNativeTarget "mfc" */;
@@ -299,10 +378,12 @@
 				06BA70C3251BB5E10095D512 /* Frameworks */,
 				06BA70C4251BB5E10095D512 /* Resources */,
 				801A539ACE7401904FE0BFB4 /* [CP] Embed Pods Frameworks */,
+				069BFCBC25852E6000B8C691 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				069BFCBA25852E6000B8C691 /* PBXTargetDependency */,
 			);
 			name = mfc;
 			productName = mfc;
@@ -354,9 +435,12 @@
 		06BA70BE251BB5E10095D512 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					069BFCAA25852E5F00B8C691 = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					06BA70C5251BB5E10095D512 = {
 						CreatedOnToolsVersion = 12.0;
 					};
@@ -387,11 +471,20 @@
 				06BA70C5251BB5E10095D512 /* mfc */,
 				06BA70DB251BB5E50095D512 /* mfcTests */,
 				06BA70E6251BB5E50095D512 /* mfcUITests */,
+				069BFCAA25852E5F00B8C691 /* mfc-alertExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		069BFCA925852E5F00B8C691 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				069BFCB525852E6000B8C691 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		06BA70C4251BB5E10095D512 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -523,6 +616,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		069BFCA725852E5F00B8C691 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				069BFCB725852E6000B8C691 /* mfc_alert.intentdefinition in Sources */,
+				069BFCB225852E5F00B8C691 /* mfc_alert.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		06BA70C2251BB5E10095D512 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -531,7 +633,9 @@
 				067BC3E425448C4C009AD307 /* AuthProfileView.swift in Sources */,
 				06C97A6D257985FE00F28D51 /* Maps.swift in Sources */,
 				06F180042544CF9E008A653B /* AddNews.swift in Sources */,
+				06E91F5C2585044E0066EDE1 /* DetailServices.swift in Sources */,
 				06BA70CA251BB5E10095D512 /* AppDelegate.swift in Sources */,
+				069BFCB825852E6000B8C691 /* mfc_alert.intentdefinition in Sources */,
 				0679EB6B25443D5B00625804 /* Profile.swift in Sources */,
 				06F17FFB2544CE83008A653B /* News.swift in Sources */,
 				06E3CAB4257D775200A6B567 /* ServicesStruct.swift in Sources */,
@@ -566,6 +670,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		069BFCBA25852E6000B8C691 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 069BFCAA25852E5F00B8C691 /* mfc-alertExtension */;
+			targetProxy = 069BFCB925852E6000B8C691 /* PBXContainerItemProxy */;
+		};
 		06BA70DE251BB5E50095D512 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 06BA70C5251BB5E10095D512 /* mfc */;
@@ -592,6 +701,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		069BFCBD25852E6000B8C691 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 35CPX3D2BA;
+				INFOPLIST_FILE = "mfc-alert/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.atlantislab.mfc.mfc-alert";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		069BFCBE25852E6000B8C691 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 35CPX3D2BA;
+				INFOPLIST_FILE = "mfc-alert/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.atlantislab.mfc.mfc-alert";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		06BA70EE251BB5E50095D512 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -714,6 +867,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B1086F46AC64024FA395F297 /* Pods-mfc.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -738,6 +892,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E2C4BF741947994C3ADC3BF4 /* Pods-mfc.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -849,6 +1004,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		069BFCBF25852E6000B8C691 /* Build configuration list for PBXNativeTarget "mfc-alertExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				069BFCBD25852E6000B8C691 /* Debug */,
+				069BFCBE25852E6000B8C691 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		06BA70C1251BB5E10095D512 /* Build configuration list for PBXProject "mfc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
